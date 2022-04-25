@@ -16,7 +16,9 @@ public interface ProjectConfig extends Config {
     String browserVersion();
     @DefaultValue("1920x1080")
     String browserSize();
-    String browserMobileView();
     String remoteDriverUrl();
     String videoStorage();
+    @Key("baseUrl")
+    @DefaultValue("https://www.dji.com/products/professional")
+    String webUrl();
 }
