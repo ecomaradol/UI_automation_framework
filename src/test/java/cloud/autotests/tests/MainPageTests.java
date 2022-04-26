@@ -8,6 +8,7 @@ import org.junit.jupiter.api.Test;
 
 import static com.codeborne.selenide.Condition.exist;
 import static com.codeborne.selenide.Condition.text;
+import static com.codeborne.selenide.Configuration.baseUrl;
 import static com.codeborne.selenide.Selenide.*;
 import static io.qameta.allure.Allure.step;
 import static org.assertj.core.api.Assertions.assertThat;
@@ -19,7 +20,7 @@ public class MainPageTests extends TestBase {
     @DisplayName("Page title should have header text")
     void titleTest() {
         step("Open url 'https://www.dji.com/products/professional'", () ->
-            open("https://www.dji.com/products/professional"));
+            open(baseUrl));
 
         step("Page title should have text 'Professional - DJI'", () -> {
             String expectedTitle = "Professional - DJI";

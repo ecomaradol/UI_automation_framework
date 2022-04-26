@@ -20,5 +20,5 @@ public interface ProjectConfig extends Config {
     String videoStorage();
     @Key("baseUrl")
     @DefaultValue("https://www.dji.com/products/professional")
-    String webUrl();
+    String baseUrl();
 }
