@@ -29,7 +29,7 @@ public class MainPage {
 
     @Step("Open the main page")
     public MainPage openMainPage() {
-        open("/de/products/professional");
+        open("/products/professional");
 
         return this;
     }

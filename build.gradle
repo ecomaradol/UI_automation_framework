@@ -78,6 +78,7 @@ tasks.withType(Test) {
 
 test {
     useJUnitPlatform()
+    systemProperty "chromeoptions.prefs", "intl.accept_languages=ru"
 }
 
 task ui_tests(type: Test) {
