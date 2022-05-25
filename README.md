@@ -1,6 +1,6 @@
 #  UI Automation Framework for 'DJI' website
 
-Click [here](https://www.dji.com/products/professional) to take a look at the website!
+Click [here](https://www.dji.com/de/products/professional) to take a look at the website!
 
 ## Technologies used in the project:
 
@@ -9,8 +9,8 @@ Click [here](https://www.dji.com/products/professional) to take a look at the we
 [<img alt="Github" height="70" src="images/logo/GitHub.svg" width="70"/>](https://github.com/)
 [<img alt="JUnit 5" height="70" src="images/logo/Junit5.svg" width="70"/>](https://junit.org/junit5/)
 [<img alt="Gradle" height="70" src="images/logo/Gradle.svg" width="70"/>](https://gradle.org/)
-[<img alt="Rest-assured" height="70" src="images/logo/Selenide.svg" width="70"/>](https://rest-assured.io/)
-[<img alt="Rest-assured" height="70" src="images/logo/Selenoid.svg" width="70"/>](https://aerokube.com/selenoid/)
+[<img alt="Selenide" height="70" src="images/logo/Selenide.svg" width="70"/>](https://rest-assured.io/)
+[<img alt="Selenoid" height="70" src="images/logo/Selenoid.svg" width="70"/>](https://aerokube.com/selenoid/)
 [<img alt="Allure" height="70" src="images/logo/Allure.svg" width="70"/>](https://github.com/allure-framework/allure2)
 [<img alt="Jenkins" height="70" src="images/logo/Jenkins.svg" width="70"/>](https://www.jenkins.io/)
 [<img alt="Allure_EE" height="70" src="images/logo/Allure_EE.svg" width="70"/>](https://qameta.io/)
@@ -30,31 +30,41 @@ Click [here](https://www.dji.com/products/professional) to take a look at the we
 ## To run tests locally use:
 
 ```
-gradle clean test 
+gradle clean test
 ```
 
 
 ## Test cases
 
-✓ Add a new pet to the store
+✓ Page title has Logo
 
-✓ Find pet by ID
+✓ Page has 'Store' button
 
-✓ Find pet by status
+✓ Page has left-side menu
 
-✓ Delete a pet
+✓ Page has footer
 
-✓ Find non-existing pet by ID
+✓ Left-side menu has links
+
+✓ Camera stabilizer list is existed
+
+✓ Hover the cursor over the login menu
 
 
 ## Jenkins Job
 
 Jenkins is an automation server which lets us run tests
 
-Click <a target="_blank" href="https://jenkins.autotests.cloud/job/11-Mara_dol-api/">here</a> to see the job for "Dji" website
+Click <a target="_blank" href="https://jenkins.autotests.cloud/job/11-Mara_dol-UIAutotests/">here</a> to see the job for "Dji" website
 
 <p align="center">
-<img title="Jenkins job" src="images/screenshot/jenkinsApi.PNG">
+<img title="Jenkins job" src="images/screenshot/jenkins.PNG">
+</p>
+
+It is the job that can run with different parameters as browser, resolution of screen and environment.
+
+<p align="center">
+<img title="Jenkins job" src="images/screenshot/jenkinsParams.PNG">
 </p>
 
 ## Allure report
@@ -62,7 +72,7 @@ Click <a target="_blank" href="https://jenkins.autotests.cloud/job/11-Mara_dol-a
 Allure Report is a flexible, lightweight test reporting tool. It provides clear graphical reports and allows extracting
 the maximum of information from the everyday testing process.
 
-Click <a target="_blank" href="https://jenkins.autotests.cloud/job/11-Mara_dol-api/2/allure/">here</a> to see the report for "Dji" website
+Click <a target="_blank" href="https://jenkins.autotests.cloud/job/11-Mara_dol-UIAutotests/7/allure/">here</a> to see the report for "Dji" website
 
 
 ### Test suites
@@ -71,11 +81,18 @@ Click <a target="_blank" href="https://jenkins.autotests.cloud/job/11-Mara_dol-a
 <img title="Allure Test Suites" src="images/screenshot/allureTestSuites.PNG">
 </p>
 
+### Attachments
+
+A screenshot and video are attached for each test.
+
+<p align="center">
+<img title="Allure Attachments" src="images/screenshot/allureAttach.PNG">
+</p>
 
 ### Graphs
 
 <p align="center">
-<img title="Allure Graphs" src="images/screenshot/allureGraphs.PNG">
+<img title="Allure Graphs" src="images/screenshot/allureGraph.PNG">
 </p>
 
 
@@ -84,14 +101,16 @@ Click <a target="_blank" href="https://jenkins.autotests.cloud/job/11-Mara_dol-a
 Allure TestOps allows you to manage testing in one place.
 Supports the full testing lifecycle for both manual and automated tests.
 
-Click <a target="_blank" href="https://allure.autotests.cloud/project/1335/launches">here</a> to see the lanches for "Dji" website
+Click <a target="_blank" href="https://allure.autotests.cloud/project/1348/launches">here</a> to see the lanches for "Dji" website
 
 ### Dashboard
+
 <p align="center">
-<img title="TestOps Dashboard" src="images/screenshot/testOpsDashboard.PNG">
+<img title="TestOps Dashboard" src="images/screenshot/testOpsDash.PNG">
 </p>
 
 ### Test Cases
+
 <p align="center">
 <img title="TestOps Test Cases" src="images/screenshot/testOpsTestCases.PNG">
 </p>
@@ -102,50 +121,5 @@ Click <a target="_blank" href="https://allure.autotests.cloud/project/1335/launc
 After the tests are completed, the report comes to Telegram using a bot
 
 <p align="center">
-<img title="Telegram Notification" src="images/screenshot/telegramNotification.PNG">
+<img title="Telegram Notification" src="images/screenshot/telergam.PNG">
 </p>
-
-# Project in Allure TestOps with manual & automated tests
-<a target="_blank" href="https://allure.autotests.cloud/project/%s">allure.autotests.cloud/project/%s</a> (ask admin@qa.guru for access)
-
-# Jenkins job
-<a target="_blank" href="https://jenkins.autotests.cloud/job/%s">jenkins.autotests.cloud/job/%s</a>
-
-
-# USAGE examples
-
-### For run remote tests need fill remote.properties or to pass value:
-
-* browser (default chrome)
-* browserVersion (default 89.0)
-* browserSize (default 1920x1080)
-* browserMobileView (mobile device name, for example iPhone X)
-* remoteDriverUrl (url address from selenoid or grid)
-* videoStorage (url address where you should get video)
-* threads (number of threads)
-
-
-Run tests with filled remote.properties:
-```bash
-gradle clean test
-```
-
-Run tests with not filled remote.properties:
-```bash
-gradle clean -DremoteDriverUrl=https://%s:%s@selenoid.autotests.cloud/wd/hub/ -DvideoStorage=https://selenoid.autotests.cloud/video/ -Dthreads=1 test
-```
-
-Serve report:
-```bash
-allure serve build/allure-results
-```
-
-
-###### For further development there are some example tests in src/test/java/cloud.autotests/tests/demowebshop
-* remove @Disabled("...") annotation to run tests
-```bash
-gradle clean demowebshop
-```
-
-:heart: <a target="_blank" href="https://qa.guru">qa.guru</a><br/>
-:blue_heart: <a target="_blank" href="https://t.me/qa_automation">t.me/qa_automation</a>

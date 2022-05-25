@@ -84,8 +84,8 @@ public class MainPage {
     @Step("Hover the cursor over the login menu")
     public MainPage hoverToLoginMenu() {
         userIcon.hover();
-        login.should(exist);
-        register.should(appear);
+        login.should(visible);
+        register.should(visible);
 
         return this;
     }
