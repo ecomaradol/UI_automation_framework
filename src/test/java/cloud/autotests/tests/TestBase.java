@@ -40,14 +40,6 @@ public class TestBase {
         Configuration.browserSize = System.getProperty("browserSize", "1920x1080");
             SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
 
-//    String remoteDriverUser = System.getProperty("remoteDriverUser");
-//    String remoteDriverPassword = System.getProperty("remoteDriverPassword");
-//
-//    Configuration.baseUrl = "https://www.dji.com/";
-//    Configuration.browserSize = "1920x1080";
-//    Configuration.browser = System.getProperty("browser", "chrome");
-//
-//    Configuration.remote = "https://" + user + ":" + password + "@" + System.getProperty("remoteBrowser");
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("enableVNC", true);
         capabilities.setCapability("enableVideo", true);
