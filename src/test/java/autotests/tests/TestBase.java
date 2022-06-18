@@ -1,9 +1,9 @@
-package cloud.autotests.tests;
+package autotests.tests;
 
 
-import cloud.autotests.config.CredentialsConfig;
-import cloud.autotests.helpers.Attach;
-import cloud.autotests.helpers.DriverSettings;
+import autotests.config.CredentialsConfig;
+import autotests.helpers.DriverSettings;
+import autotests.helpers.Attach;
 import com.codeborne.selenide.Configuration;
 
 

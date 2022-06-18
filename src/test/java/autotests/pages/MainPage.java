@@ -1,31 +1,31 @@
-package pages;
+package autotests.pages;
 
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 import io.qameta.allure.Step;
-import org.openqa.selenium.By;
 
-import static com.codeborne.selenide.Condition.*;
-import static com.codeborne.selenide.Selenide.*;
+import static com.codeborne.selenide.Condition.exist;
+import static com.codeborne.selenide.Condition.visible;
+import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.Selenide.open;
 
 public class MainPage {
 
     private final SelenideElement
-
-                logo = $(".navbar-brand-logo"),
-                buttonStore = $(".dui-btn.dui-btn-sm.dui-btn-buy.btn-store.ga-data"),
-                leftSideMenu = $(".dui-sidenav"),
-                footer = $("#site-footer"),
-                groundSystem = $("#ground-based-cinematography-system-nav"),
-                aerialSystem = $("#integrated-system-nav"),
-                gimbal =  $("#camera-gimbal-nav"),
-                stabilizer = $("#camera-stabilizer-nav"),
-                accessories = $("#professional-accessories-nav"),
-                stabilizersLink = $("#camera-stabilizer-nav"),
-                userIcon = $(".user-icon"),
-                stabilizerList = $("#camera-stabilizer-list"),
-                register = $(By.xpath("//a[@data-ga-label='other-register']")),
-                login = $(By.xpath("//a[@data-ga-label='other-login']"));
+            logo = $(".navbar-brand-logo"),
+            buttonStore = $(".dui-btn.dui-btn-sm.dui-btn-buy.btn-store.ga-data"),
+            leftSideMenu = $(".dui-sidenav"),
+            footer = $("#site-footer"),
+            groundSystem = $("#ground-based-cinematography-system-nav"),
+            aerialSystem = $("#integrated-system-nav"),
+            gimbal = $("#camera-gimbal-nav"),
+            stabilizer = $("#camera-stabilizer-nav"),
+            accessories = $("#professional-accessories-nav"),
+            stabilizersLink = $("#camera-stabilizer-nav"),
+            userIcon = $(".user-icon"),
+            stabilizerList = $("#camera-stabilizer-list"),
+            register = $("a[@data-ga-label=other-register]"),
+            login = $("a[@data-ga-label=other-login]");
 
     @Step("Open the main page")
     public MainPage openMainPage() {
@@ -84,6 +84,12 @@ public class MainPage {
     @Step("Hover the cursor over the login menu")
     public MainPage hoverToLoginMenu() {
         userIcon.hover();
+
+        return this;
+    }
+
+    @Step("Check that the login menu is existed")
+    public MainPage checkLoginMenu() {
         login.should(visible);
         register.should(visible);
 
