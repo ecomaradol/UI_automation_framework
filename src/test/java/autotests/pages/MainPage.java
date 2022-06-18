@@ -24,8 +24,8 @@ public class MainPage {
             stabilizersLink = $("#camera-stabilizer-nav"),
             userIcon = $(".user-icon"),
             stabilizerList = $("#camera-stabilizer-list"),
-            register = $("a[@data-ga-label=other-register]"),
-            login = $("a[@data-ga-label=other-login]");
+            register = $(".register-link.ga-data"),
+            login = $(".login-link.ga-data");
 
     @Step("Open the main page")
     public MainPage openMainPage() {
